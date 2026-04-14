@@ -22,12 +22,15 @@ public class HistoireTP4
 		marco.boire();
 		
 		System.out.println("Test Yakuza");
-		Yakuza yakulenoir = new Yakuza("Yaku Le Noir", "whisky", 30);
+		Yakuza yakulenoir = new Yakuza("Yaku Le Noir", "whisky", 30, "Warsong");
 		yakulenoir.direBonjour();
 		yakulenoir.extorquer(marco);
 		
 		System.out.println("Test Ronin");
 		Ronin roro = new Ronin("Roro", "shochu", 60);
 		roro.donner(marco);
+		
+		System.out.println("Test provocation");
+		roro.provoquer(yakulenoir);
 	}
 }
