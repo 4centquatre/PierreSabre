@@ -2,9 +2,9 @@ package personnages;
 
 public class Humain 
 {
-	private String nom;
-	private String boisson;
-	private int argent;
+	protected String nom;
+	protected String boisson;
+	protected int argent;
 	
 	public Humain(String nom, String boisson, int argent) 
 	{
@@ -38,7 +38,7 @@ public class Humain
 		this.argent -= montant;
 	}
 	
-	private void parler(String texte)
+	protected void parler(String texte)
 	{
 		System.out.println("(" + getNom() + ") - " + texte);
 	}
