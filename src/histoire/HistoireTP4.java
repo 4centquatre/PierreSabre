@@ -25,5 +25,9 @@ public class HistoireTP4
 		Yakuza yakulenoir = new Yakuza("Yaku Le Noir", "whisky", 30);
 		yakulenoir.direBonjour();
 		yakulenoir.extorquer(marco);
+		
+		System.out.println("Test Ronin");
+		Ronin roro = new Ronin("Roro", "shochu", 60);
+		roro.donner(marco);
 	}
 }
