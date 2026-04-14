@@ -20,5 +20,10 @@ public class HistoireTP4
 		marco.seFaireExtorquer();
 		marco.recevoir(15);
 		marco.boire();
+		
+		System.out.println("Test Yakuza");
+		Yakuza yakulenoir = new Yakuza("Yaku Le Noir", "whisky", 30);
+		yakulenoir.direBonjour();
+		yakulenoir.extorquer(marco);
 	}
 }
