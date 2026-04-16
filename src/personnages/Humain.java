@@ -5,12 +5,15 @@ public class Humain
 	protected String nom;
 	protected String boisson;
 	protected int argent;
+	protected int nbConnaissance;
+	protected Humain[] memoire = new Humain[30];
 	
 	public Humain(String nom, String boisson, int argent) 
 	{
 		this.nom = nom;
 		this.boisson = boisson;
 		this.argent = argent;
+		this.nbConnaissance = 0;
 	}
 
 	public String getNom() 
@@ -64,6 +67,42 @@ public class Humain
 		{
 			parler("Je n'ai plus que " + getArgent() + " sous en poche. Je ne peux même pas m'offrir un(e) " + bien + " à " + prix + " sous.");
 		}
+	}
+	
+	public void memoriser(Humain humain)
+	{
+		if(nbConnaissance < memoire.length)
+		{
+			this.memoire[nbConnaissance] = humain;
+			nbConnaissance++;
+			
+		}
+		else
+		{
+			for(int i = 0; i < nbConnaissance - 1; i++)
+			{
+				this.memoire[i] = this.memoire[i+1];
+			}
+			this.memoire[nbConnaissance - 1] = humain;
+		}
+	}
+	
+	public void faireConnaissanceAvec(Humain humain)
+	{
+		this.direBonjour();
+		humain.direBonjour();
+		this.memoriser(humain);
+		humain.memoriser(this);
+	}
+	
+	public void listerConnaissance()
+	{
+		String chaine = "Je connais beaucoup de monde dont : ";
+		for(int i = 0; i < nbConnaissance ; i++)
+		{
+			chaine += memoire[i].getNom() + ", ";
+		}
+		parler(chaine);
 	}
 }
 
