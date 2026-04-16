@@ -16,6 +16,13 @@ public class Yakuza extends Humain
 		return reputation;
 	}
 	
+	@Override
+	public void direBonjour()
+	{
+		super.direBonjour();
+		parler("Mon clan est celui de " + this.clan);
+	}
+	
 	public void extorquer(Commercant victime)
 	{
 		parler("Tiens, tiens, ne serait-ce pas un faible marchand qui passe par là ?");
