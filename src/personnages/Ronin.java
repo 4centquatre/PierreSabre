@@ -35,4 +35,9 @@ public class Ronin extends Humain
 			perdreArgent(getArgent());
 		}
 	}
+	
+	@Override
+	public String toString() {
+		return "ronin";
+	}
 }

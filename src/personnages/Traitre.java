@@ -59,4 +59,9 @@ public class Traitre extends Samourai
 			}
 		}
 	}
+	
+	@Override
+	public String toString() {
+		return "traitre";
+	}
 }

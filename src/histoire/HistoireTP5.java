@@ -15,6 +15,7 @@ public class HistoireTP5
 		Traitre masako = new Traitre("Miyamoto", "Masako", "whisky", 100);
 		
 		System.out.println("Test 1");
+		
 		marco.faireConnaissanceAvec(roro);
 		marco.faireConnaissanceAvec(yaku);
 		marco.faireConnaissanceAvec(chonin);
@@ -30,6 +31,7 @@ public class HistoireTP5
 		
 		System.out.println("");
 		System.out.println("Test Traitre");
+		
 		masako.faireLeGentil();
 		masako.ranconner(kumi);
 		masako.ranconner(chonin);
@@ -39,5 +41,17 @@ public class HistoireTP5
 		masako.faireConnaissanceAvec(yaku);
 		masako.faireLeGentil();
 		masako.faireConnaissanceAvec(roro);
+		
+		System.out.println("");
+		System.out.println("Test Grand-Mère");
+		
+		GrandMere grandMere = new GrandMere("Grand-Mère", 10);
+		grandMere.faireConnaissanceAvec(akimoto);
+		grandMere.faireConnaissanceAvec(yaku);
+		grandMere.faireConnaissanceAvec(masako);
+		grandMere.faireConnaissanceAvec(kumi);
+		grandMere.faireConnaissanceAvec(marco);
+		grandMere.faireConnaissanceAvec(chonin);
+		grandMere.ragoter();
 	}
 }

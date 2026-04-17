@@ -48,4 +48,9 @@ public class Yakuza extends Humain
 		reputation += 1;
 		parler("Ce ronin pensait vraiment battre " + getNom() + " du clan de " + clan + " ? Je l'ai dépouillé de ses " + gain + " sous.");
 	}
+	
+	@Override
+	public String toString() {
+		return "yakuza";
+	}
 }

@@ -20,4 +20,9 @@ public class Commercant extends Humain
 		parler(argent + " sous ! Je te remercie généreux donateur !");
 		gagnerArgent(argent);
 	}
+	
+	@Override
+	public String toString() {
+		return "commercant";
+	}
 }

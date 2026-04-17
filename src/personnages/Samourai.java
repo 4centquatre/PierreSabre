@@ -20,4 +20,9 @@ public class Samourai extends Ronin
 	{
 		parler("Qu'est-ce que je vais choisir comme boisson ? Tiens je vais prendre du " + boisson);
 	}
+	
+	@Override
+	public String toString() {
+		return "samourai";
+	}
 }

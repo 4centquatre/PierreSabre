@@ -6,7 +6,7 @@ public class Humain
 	protected String boisson;
 	protected int argent;
 	protected int nbConnaissance;
-	protected Humain[] memoire = new Humain[30];
+	protected Humain[] memoire;
 	
 	public Humain(String nom, String boisson, int argent) 
 	{
@@ -14,6 +14,7 @@ public class Humain
 		this.boisson = boisson;
 		this.argent = argent;
 		this.nbConnaissance = 0;
+		this.memoire = new Humain[30];
 	}
 
 	public String getNom() 
@@ -69,7 +70,12 @@ public class Humain
 		}
 	}
 	
-	public void memoriser(Humain humain)
+	@Override
+	public String toString() {
+		return "habitant";
+	}
+
+	protected void memoriser(Humain humain)
 	{
 		if(nbConnaissance < memoire.length)
 		{
